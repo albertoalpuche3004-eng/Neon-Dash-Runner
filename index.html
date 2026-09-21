@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon Dash APK - Descargar Gratis para Android | Juego Oficial</title>
-  <meta name="description" content="Descarga la APK oficial de Neon Dash para Android. Ritmo arcade en perspectiva trasera, doble salto acrobático, velocidad progresiva y neón a 120 FPS." />
+  <title>Neon Dash Runner APK - Descargar Gratis para Android | AxioMa Games</title>
+  <meta name="description" content="Descarga la APK oficial de Neon Dash Runner para Android desarrollada por AxioMa Games. Salto acrobático en perspectiva trasera, doble salto y 120 FPS." />
 
   <!-- Google Fonts: Orbitron & Rajdhani -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +22,11 @@
             rajdhani: ['Rajdhani', 'sans-serif'],
           },
           colors: {
-            neonCyan: '#06b6d4',
-            neonPink: '#ec4899',
-            neonYellow: '#eab308',
-            neonPurple: '#a855f7',
-            cyberDark: '#03000a',
+            neonCyan: '#00f0ff',
+            neonGreen: '#00ff88',
+            neonPink: '#ff007f',
+            neonYellow: '#fde047',
+            cyberDark: '#04010a',
           }
         }
       }
@@ -34,82 +34,89 @@
   </script>
 
   <style>
-    /* Custom Neon & Glow Utilities */
     body {
-      background-color: #03000a;
+      background-color: #04010a;
       color: #f8fafc;
       font-family: 'Rajdhani', sans-serif;
       overflow-x: hidden;
     }
 
-    .neon-border-cyan {
-      box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.2);
-    }
-
-    .neon-glow-pink {
-      box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
-    }
-
-    .neon-glow-cyan {
-      box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
+    .cyber-grid {
+      background-size: 38px 38px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 0, 127, 0.06) 1px, transparent 1px);
     }
 
     .glass-panel {
-      background: rgba(13, 7, 28, 0.75);
+      background: rgba(10, 4, 22, 0.78);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .glass-panel:hover {
-      border-color: rgba(6, 182, 212, 0.5);
+      border-color: rgba(0, 240, 255, 0.45);
     }
 
-    .cyber-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(6, 182, 212, 0.07) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(236, 72, 153, 0.07) 1px, transparent 1px);
-    }
-
-    @keyframes pulseGlow {
+    @keyframes neonPulse {
       0%, 100% {
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.7), 0 0 35px rgba(236, 72, 153, 0.4);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.7), 0 0 40px rgba(255, 0, 127, 0.45);
       }
       50% {
-        box-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 45px rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 35px rgba(255, 0, 127, 0.85), 0 0 55px rgba(0, 255, 136, 0.55);
       }
     }
 
     .pulse-btn {
-      animation: pulseGlow 2.5s infinite ease-in-out;
+      animation: neonPulse 2.4s infinite ease-in-out;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .pulse-btn:hover {
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+    }
+
+    .pulse-btn:active {
+      transform: scale(0.96);
+    }
+
+    .text-glow-cyan {
+      text-shadow: 0 0 16px rgba(0, 240, 255, 0.8), 0 0 32px rgba(0, 240, 255, 0.4);
+    }
+
+    .text-glow-pink {
+      text-shadow: 0 0 16px rgba(255, 0, 127, 0.8), 0 0 32px rgba(255, 0, 127, 0.4);
     }
   </style>
 </head>
 
 <body class="cyber-grid relative min-h-screen selection:bg-neonPink selection:text-white">
 
-  <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/10 px-4 lg:px-8 py-3.5">
+  <!-- STREAMING_CHUNK:Building sticky header with official SVG logo and direct <a> download button -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/10 px-4 lg:px-8 py-3">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo Brand -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-black/80 border border-cyan-400/50 flex items-center justify-center p-1.5 shadow-[0_0_20px_rgba(6,182,212,0.6)] group-hover:scale-105 transition-transform">
+        <div class="w-12 h-12 rounded-2xl bg-black/90 border border-cyan-400/60 flex items-center justify-center p-1 shadow-[0_0_20px_rgba(0,240,255,0.6)] group-hover:scale-105 transition-transform">
           <!-- Official Neon Cube Logo SVG (Concentric Glow Rings + Square Face) -->
           <svg viewBox="0 0 256 256" class="w-full h-full drop-shadow-[0_0_12px_#00f0ff]">
-            <rect width="256" height="256" rx="56" fill="#04020a"/>
-            <!-- Outer Cyan Ring -->
-            <rect x="18" y="18" width="220" height="220" rx="46" fill="none" stroke="#00f0ff" stroke-width="12" stroke-opacity="0.95"/>
+            <rect width="256" height="256" rx="58" fill="#04020a"/>
+            <!-- Outer Neon Cyan Ring -->
+            <rect x="18" y="18" width="220" height="220" rx="46" fill="none" stroke="#00f0ff" stroke-width="14" stroke-opacity="0.95"/>
             <!-- Neon Green Ring -->
-            <rect x="42" y="42" width="172" height="172" rx="36" fill="none" stroke="#22c55e" stroke-width="13" stroke-opacity="0.95"/>
+            <rect x="44" y="44" width="168" height="168" rx="36" fill="none" stroke="#00ff88" stroke-width="14" stroke-opacity="0.95"/>
             <!-- Inner Cyan Border -->
-            <rect x="68" y="68" width="120" height="120" rx="26" fill="#031f18" stroke="#06b6d4" stroke-width="10"/>
+            <rect x="70" y="70" width="116" height="116" rx="26" fill="#021c14" stroke="#00f0ff" stroke-width="10"/>
             <!-- Square Eyes & Mouth -->
-            <rect x="92" y="96" width="26" height="26" rx="3" fill="#ffffff"/>
-            <rect x="138" y="96" width="26" height="26" rx="3" fill="#ffffff"/>
-            <rect x="98" y="146" width="60" height="12" rx="3" fill="#ffffff"/>
+            <rect x="92" y="96" width="26" height="26" rx="4" fill="#ffffff"/>
+            <rect x="138" y="96" width="26" height="26" rx="4" fill="#ffffff"/>
+            <rect x="96" y="146" width="64" height="12" rx="3" fill="#ffffff"/>
           </svg>
         </div>
         <div class="flex flex-col">
-          <span class="font-orbitron font-black text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-pink-400 to-yellow-300">
+          <span class="font-orbitron font-black text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonPink to-yellow-300">
             NEON DASH
           </span>
           <span class="text-[10px] font-orbitron tracking-widest text-slate-400 -mt-1 font-bold">BY AXIOMA GAMES</span>
@@ -117,36 +124,38 @@
       </a>
 
       <!-- Desktop Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider text-slate-300">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold tracking-wider text-slate-300">
         <a href="#caracteristicas" class="hover:text-neonCyan transition">CARACTERÍSTICAS</a>
         <a href="#instalacion" class="hover:text-neonCyan transition">CÓMO INSTALAR</a>
         <a href="#requisitos" class="hover:text-neonCyan transition">REQUISITOS</a>
         <a href="#faq" class="hover:text-neonCyan transition">PREGUNTAS</a>
       </nav>
 
-      <!-- Header Download CTA -->
+      <!-- Header Download CTA Button using native <a> tag -->
       <div class="flex items-center gap-3">
-        <button onclick="startApkDownload()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-black tracking-wider text-white hover:opacity-90 active:scale-95 transition shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+        <a href="https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=" 
+           download="run-dash-neon-alpha.apk"
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-black tracking-wider text-white hover:opacity-90 active:scale-95 transition shadow-[0_0_15px_rgba(0,240,255,0.5)]">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2L6.5 11h3.5v5h4v-5h3.5L12 2z"/></svg>
           <span>DESCARGAR (40 MB)</span>
-        </button>
+        </a>
       </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 lg:px-8 py-10 lg:py-16">
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Left Column: Copy & CTAs -->
+      <!-- Left Column: Copy, Direct <a> CTAs, and Specs -->
       <div class="lg:col-span-7 flex flex-col items-start gap-5">
         <!-- Badges list -->
         <div class="flex flex-wrap items-center gap-2">
-          <span class="px-3 py-1 rounded-full bg-neonCyan/15 border border-neonCyan/50 text-neonCyan text-xs font-orbitron font-extrabold tracking-wider flex items-center gap-1.5 shadow-[0_0_12px_rgba(6,182,212,0.3)]">
+          <span class="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-400/50 text-neonCyan text-xs font-orbitron font-black tracking-wider flex items-center gap-1.5 shadow-[0_0_12px_rgba(0,240,255,0.3)]">
             <span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
-            VERSIÓN v1.0.4
+            VERSIÓN v1.0.1 ALPHA
           </span>
-          <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/50 text-emerald-400 text-xs font-orbitron font-bold tracking-wider flex items-center gap-1">
+          <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/50 text-neonGreen text-xs font-orbitron font-bold tracking-wider flex items-center gap-1">
             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            100% LIBRE DE VIRUS
+            100% GRATIS CON ANUNCIOS
           </span>
           <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-slate-300 text-xs font-orbitron font-bold tracking-wider">
             ANDROID 7.0+
@@ -155,28 +164,30 @@
 
         <!-- Headline -->
         <h1 class="text-4xl sm:text-6xl font-black font-orbitron tracking-tight leading-tight">
-          EL DESAFÍO RÍTMICO <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonPink to-yellow-300 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)]">
-            DEFINITIVO EN 3D
+          NEON DASH RUNNER <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonPink to-yellow-300 text-glow-cyan">
+            DESAFÍO RÍTMICO 3D
           </span>
         </h1>
 
         <!-- Subtitle -->
         <p class="text-slate-300 text-base sm:text-lg font-medium max-w-xl leading-relaxed">
-          Esquiva bardas y picos a velocidades implacables desde la perspectiva trasera del cubo. Domina el <strong class="text-white">Doble Salto acrobático</strong>, recolecta orbes de neón y pon a prueba tus reflejos en partidas de pura adrenalina.
+          Esquiva bardas y picos a velocidades progresivas implacables desde la perspectiva trasera del cubo. Domina el <strong class="text-white">Doble Salto acrobático</strong>, recolecta orbes de neón y pon a prueba tus reflejos al máximo ritmo synthwave.
         </p>
 
-        <!-- CTA Download Box -->
+        <!-- CTA Download Box using native <a> tags -->
         <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
-          <button onclick="startApkDownload()" class="pulse-btn px-8 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-neonPink to-yellow-400 text-white font-orbitron font-black text-base tracking-widest flex items-center justify-center gap-3 hover:brightness-110 active:scale-95 transition-transform cursor-pointer">
+          <a href="https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=" 
+             download="run-dash-neon-alpha.apk"
+             class="pulse-btn px-8 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-neonPink to-neonYellow text-white font-orbitron font-black text-base tracking-widest flex items-center justify-center gap-3 cursor-pointer shadow-[0_0_30px_rgba(0,240,255,0.6)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
             <span>DESCARGAR APK GRATIS</span>
-          </button>
+          </a>
 
           <div class="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass-panel text-slate-300 text-xs">
             <div class="flex flex-col">
-              <span class="font-bold text-slate-200">Archivo: <span class="text-neonCyan">run-dash-neon-alpha.apk</span></span>
-              <span class="text-slate-400">Peso: 40 MB • Alojado en Supabase Cloud</span>
+              <span class="font-bold text-slate-200">Archivo: <span class="text-neonCyan font-mono">run-dash-neon-alpha.apk</span></span>
+              <span class="text-slate-400">Peso: 40 MB • Servidor Supabase Storage</span>
             </div>
           </div>
         </div>
@@ -200,7 +211,7 @@
 
       <!-- Right Column: Smartphone Mockup Showcase -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="relative w-full max-w-[300px] aspect-[9/18] rounded-[36px] p-3 bg-gradient-to-b from-slate-700 via-slate-900 to-black border-4 border-slate-700/80 shadow-[0_0_50px_rgba(6,182,212,0.3),0_0_80px_rgba(236,72,153,0.2)]">
+        <div class="relative w-full max-w-[300px] aspect-[9/18] rounded-[36px] p-3 bg-gradient-to-b from-slate-700 via-slate-900 to-black border-4 border-slate-700/80 shadow-[0_0_50px_rgba(0,240,255,0.35),0_0_80px_rgba(255,0,127,0.25)]">
           <!-- Notch -->
           <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20"></div>
 
@@ -217,46 +228,46 @@
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
               <svg viewBox="0 0 300 600" class="w-full h-full">
                 <defs>
-                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#03000a"/>
+                  <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#04010a"/>
                     <stop offset="60%" stop-color="#1f0438"/>
                     <stop offset="100%" stop-color="#3b0764"/>
                   </linearGradient>
-                  <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                  <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stop-color="#fde047"/>
-                    <stop offset="60%" stop-color="#ec4899"/>
+                    <stop offset="60%" stop-color="#ff007f"/>
                     <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
                   </radialGradient>
                 </defs>
-                <rect width="300" height="240" fill="url(#sky)"/>
+                <rect width="300" height="240" fill="url(#skyGrad)"/>
                 <!-- Synthwave Sun -->
-                <circle cx="150" cy="220" r="70" fill="url(#sun)" />
-                <line x1="0" y1="220" x2="300" y2="220" stroke="#06b6d4" stroke-width="2"/>
+                <circle cx="150" cy="220" r="70" fill="url(#sunGrad)" />
+                <line x1="0" y1="220" x2="300" y2="220" stroke="#00f0ff" stroke-width="2"/>
                 <!-- Track Lanes -->
-                <polygon points="100,220 200,220 280,600 20,600" fill="#0a011d" stroke="#06b6d4" stroke-width="2"/>
-                <line x1="133" y1="220" x2="106" y2="600" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 8"/>
-                <line x1="166" y1="220" x2="193" y2="600" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 8"/>
+                <polygon points="100,220 200,220 280,600 20,600" fill="#0a011d" stroke="#00f0ff" stroke-width="2"/>
+                <line x1="133" y1="220" x2="106" y2="600" stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 8"/>
+                <line x1="166" y1="220" x2="193" y2="600" stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="8 8"/>
                 
                 <!-- Spikes in Lane -->
                 <polygon points="175,370 195,335 215,370" fill="#e11d48" stroke="#ffffff" stroke-width="2"/>
 
-                <!-- Player Cube 2D with Reaction Face -->
+                <!-- Player Cube 2D with Concentric Green/Cyan Glow Rings -->
                 <g transform="translate(115, 430)">
-                  <rect x="0" y="0" width="70" height="70" rx="10" fill="#22c55e" stroke="#ffffff" stroke-width="5"/>
-                  <rect x="12" y="12" width="46" height="46" rx="6" fill="#022c22" stroke="#06b6d4" stroke-width="3"/>
-                  <!-- Eyes & Fierce Smile -->
-                  <rect x="18" y="24" width="12" height="12" fill="#ffffff" rx="2"/>
-                  <rect x="40" y="24" width="12" height="12" fill="#ffffff" rx="2"/>
-                  <rect x="22" y="44" width="26" height="6" fill="#ffffff" rx="2"/>
+                  <rect x="0" y="0" width="70" height="70" rx="14" fill="#00ff88" stroke="#00f0ff" stroke-width="4"/>
+                  <rect x="10" y="10" width="50" height="50" rx="10" fill="#021c14" stroke="#00f0ff" stroke-width="3"/>
+                  <!-- Eyes & Mouth -->
+                  <rect x="18" y="22" width="12" height="12" fill="#ffffff" rx="2"/>
+                  <rect x="40" y="22" width="12" height="12" fill="#ffffff" rx="2"/>
+                  <rect x="20" y="42" width="30" height="6" fill="#ffffff" rx="2"/>
                 </g>
               </svg>
             </div>
 
             <!-- In-game Virtual Controls on Mockup -->
             <div class="pb-2 flex gap-1.5 z-10">
-              <div class="flex-1 py-2.5 rounded-xl bg-slate-900/80 border border-neonCyan/50 text-center text-[9px] font-orbitron font-black text-cyan-300">IZQ</div>
+              <div class="flex-1 py-2.5 rounded-xl bg-slate-900/80 border border-cyan-400/50 text-center text-[9px] font-orbitron font-black text-cyan-300">IZQ</div>
               <div class="flex-[1.4] py-2.5 rounded-xl bg-pink-600 border border-pink-400 text-center text-[9px] font-orbitron font-black text-white">SALTAR (x2)</div>
-              <div class="flex-1 py-2.5 rounded-xl bg-slate-900/80 border border-neonCyan/50 text-center text-[9px] font-orbitron font-black text-cyan-300">DER</div>
+              <div class="flex-1 py-2.5 rounded-xl bg-slate-900/80 border border-cyan-400/50 text-center text-[9px] font-orbitron font-black text-cyan-300">DER</div>
             </div>
           </div>
         </div>
@@ -267,13 +278,13 @@
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-neonCyan font-orbitron text-xs tracking-widest uppercase font-bold">JUGABILIDAD DE ALTO NIVEL</span>
         <h2 class="text-3xl sm:text-4xl font-black font-orbitron mt-2">¿POR QUÉ JUGAR NEON DASH?</h2>
-        <p class="text-slate-400 text-sm mt-2 font-medium">Una reinvención vertical arcade creada para quienes buscan reflejos extremos y música electrónica trepidante.</p>
+        <p class="text-slate-400 text-sm mt-2 font-medium">Una reinvención vertical arcade creada por AxioMa Games para quienes buscan reflejos extremos y música electrónica trepidante.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Feature 1 -->
         <div class="glass-panel p-6 rounded-2xl flex flex-col gap-3 transition hover:-translate-y-1 duration-200">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-neonCyan flex items-center justify-center text-neonCyan shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-neonCyan flex items-center justify-center text-neonCyan shadow-[0_0_15px_rgba(0,240,255,0.4)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.84L19.46 19H4.54L12 5.84zM11 10h2v4h-2zm0 5h2v2h-2z"/></svg>
           </div>
           <h3 class="font-orbitron font-extrabold text-lg text-white">Doble Salto &amp; Físicas Reales</h3>
@@ -282,7 +293,7 @@
 
         <!-- Feature 2 -->
         <div class="glass-panel p-6 rounded-2xl flex flex-col gap-3 transition hover:-translate-y-1 duration-200">
-          <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-neonPink flex items-center justify-center text-neonPink shadow-[0_0_15px_rgba(236,72,153,0.4)]">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-neonPink flex items-center justify-center text-neonPink shadow-[0_0_15px_rgba(255,0,127,0.4)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.28-10.43zM10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg>
           </div>
           <h3 class="font-orbitron font-extrabold text-lg text-white">Velocidad Progresiva Dinámica</h3>
@@ -291,7 +302,7 @@
 
         <!-- Feature 3 -->
         <div class="glass-panel p-6 rounded-2xl flex flex-col gap-3 transition hover:-translate-y-1 duration-200">
-          <div class="w-12 h-12 rounded-xl bg-yellow-500/20 border border-yellow-400 flex items-center justify-center text-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.4)]">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/20 border border-yellow-400 flex items-center justify-center text-yellow-400 shadow-[0_0_15px_rgba(253,224,71,0.4)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm-1 14.5v-3.5H9l4-6.5v3.5h2l-4 6.5z"/></svg>
           </div>
           <h3 class="font-orbitron font-extrabold text-lg text-white">Caras Reactivas &amp; Skins</h3>
@@ -300,20 +311,20 @@
 
         <!-- Feature 4 -->
         <div class="glass-panel p-6 rounded-2xl flex flex-col gap-3 transition hover:-translate-y-1 duration-200">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-neonPurple flex items-center justify-center text-neonPurple shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-400 flex items-center justify-center text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.4)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
           </div>
           <h3 class="font-orbitron font-extrabold text-lg text-white">Modo 100% Offline</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">Juega donde quieras sin consumir datos móviles ni requerir conexión Wi-Fi constante. Tus récords se guardan localmente.</p>
+          <p class="text-slate-300 text-sm leading-relaxed">Juega donde quieras sin consumir datos móviles ni requerir conexión Wi-Fi constante. Tus récords se guardan en tu teléfono.</p>
         </div>
 
         <!-- Feature 5 -->
         <div class="glass-panel p-6 rounded-2xl flex flex-col gap-3 transition hover:-translate-y-1 duration-200">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400 flex items-center justify-center text-emerald-400 shadow-[0_0_15px_rgba(52,211,153,0.4)]">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-neonGreen flex items-center justify-center text-neonGreen shadow-[0_0_15px_rgba(0,255,136,0.4)]">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
           </div>
-          <h3 class="font-orbitron font-extrabold text-lg text-white">Cero Anuncios Invasivos</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">Disfruta de reintentos instantáneos sin banners que interrumpan tu ritmo de partida. Diseñado para sesiones fluidas y adictivas.</p>
+          <h3 class="font-orbitron font-extrabold text-lg text-white">100% Gratis con Anuncios</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Disfruta de la experiencia arcade completa sin compras bloqueadas ni cobros ocultos. Diseñado para sesiones fluidas y reintentos rápidos.</p>
         </div>
 
         <!-- Feature 6 -->
@@ -322,7 +333,7 @@
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
           </div>
           <h3 class="font-orbitron font-extrabold text-lg text-white">Audio Synthwave Rítmico</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">Líneas de sintetizador procedural integradas con bombos a 140 BPM sincronizados con el ritmo de los obstáculos.</p>
+          <p class="text-slate-300 text-sm leading-relaxed">Líneas de sintetizador procedural a 140 BPM sincronizadas perfectamente con la aparición de obstáculos y orbes.</p>
         </div>
       </div>
     </section>
@@ -331,39 +342,39 @@
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-neonPink font-orbitron text-xs tracking-widest uppercase font-bold">GUÍA PASO A PASO</span>
         <h2 class="text-3xl sm:text-4xl font-black font-orbitron mt-2">CÓMO INSTALAR EL APK EN ANDROID</h2>
-        <p class="text-slate-400 text-sm mt-2 font-medium">La instalación manual de archivos APK es rápida y totalmente segura. Sigue estos 3 pasos:</p>
+        <p class="text-slate-400 text-sm mt-2 font-medium">La instalación manual de archivos APK es directa y segura. Sigue estos 3 pasos:</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
         <!-- Step 1 -->
         <div class="glass-panel p-6 rounded-2xl relative border-t-4 border-t-neonCyan">
-          <span class="font-orbitron font-black text-4xl text-neonCyan/30 absolute top-4 right-4">01</span>
-          <div class="w-10 h-10 rounded-xl bg-neonCyan/20 text-neonCyan flex items-center justify-center font-orbitron font-black text-lg mb-4">
+          <span class="font-orbitron font-black text-4xl text-cyan-400/30 absolute top-4 right-4">01</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan-400/20 text-neonCyan flex items-center justify-center font-orbitron font-black text-lg mb-4">
             1
           </div>
           <h3 class="font-orbitron font-bold text-lg text-white mb-2">Descarga el Archivo</h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            Presiona el botón <strong class="text-neonCyan">"Descargar APK"</strong>. El navegador te preguntará si deseas guardar el archivo <code class="text-xs bg-slate-800 px-1 py-0.5 rounded text-pink-300">NeonDash_v1.0.4.apk</code>.
+            Pulsa en cualquiera de los botones <strong class="text-neonCyan">"Descargar APK"</strong> para obtener <code class="text-xs bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-pink-300">run-dash-neon-alpha.apk</code> (40 MB).
           </p>
           <div class="p-2.5 rounded-xl bg-black/50 border border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
             <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-            <span>Selecciona "Descargar de todos modos" si Chrome muestra aviso preventivo.</span>
+            <span>Selecciona "Descargar de todos modos" si tu navegador muestra aviso preventivo.</span>
           </div>
         </div>
 
         <!-- Step 2 -->
         <div class="glass-panel p-6 rounded-2xl relative border-t-4 border-t-neonPink">
-          <span class="font-orbitron font-black text-4xl text-neonPink/30 absolute top-4 right-4">02</span>
-          <div class="w-10 h-10 rounded-xl bg-neonPink/20 text-neonPink flex items-center justify-center font-orbitron font-black text-lg mb-4">
+          <span class="font-orbitron font-black text-4xl text-pink-400/30 absolute top-4 right-4">02</span>
+          <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-neonPink flex items-center justify-center font-orbitron font-black text-lg mb-4">
             2
           </div>
-          <h3 class="font-orbitron font-bold text-lg text-white mb-2">Habilita Orígenes Desconocidos</h3>
+          <h3 class="font-orbitron font-bold text-lg text-white mb-2">Permite Orígenes Desconocidos</h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            Abre el archivo descargado. Si Android lo solicita, pulsa en <strong>Ajustes</strong> y activa la casilla <em>"Permitir desde esta fuente"</em> para el instalador o navegador.
+            Abre el archivo descargado. Si Android te lo pide, entra en <strong>Ajustes</strong> y activa la opción <em>"Permitir desde esta fuente"</em> en tu navegador o explorador de archivos.
           </p>
           <div class="p-2.5 rounded-xl bg-black/50 border border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
             <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            <span>Es el procedimiento estándar para aplicaciones fuera de Google Play.</span>
+            <span>Proceso estándar para apps instaladas directamente en Android.</span>
           </div>
         </div>
 
@@ -375,16 +386,17 @@
           </div>
           <h3 class="font-orbitron font-bold text-lg text-white mb-2">Instala y ¡A Jugar!</h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            Regresa e inicia la instalación pulsando <strong class="text-yellow-400">"Instalar"</strong>. Tras unos segundos, verás el icono del cubo de neón en tu menú de aplicaciones.
+            Vuelve y pulsa <strong class="text-yellow-400">"Instalar"</strong>. En breves segundos aparecerá el cubo de neón en tu menú de aplicaciones listo para arrancar.
           </p>
           <div class="p-2.5 rounded-xl bg-black/50 border border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
             <svg class="w-4 h-4 text-neonCyan flex-shrink-0 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span>¡Conecta tus audífonos para una mejor experiencia rítmica!</span>
+            <span>¡Usa auriculares para disfrutar la banda sonora a 140 BPM!</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- STREAMING_CHUNK:Building system specifications table with <a> download button -->
     <section id="requisitos" class="pt-24">
       <div class="max-w-4xl mx-auto glass-panel p-6 sm:p-8 rounded-3xl border border-white/10">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
@@ -392,13 +404,19 @@
             <span class="text-neonCyan font-orbitron text-xs tracking-widest uppercase font-bold">FICHA TÉCNICA</span>
             <h2 class="text-2xl sm:text-3xl font-black font-orbitron text-white">REQUISITOS DEL SISTEMA</h2>
           </div>
-          <button onclick="startApkDownload()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-bold text-white shadow-lg active:scale-95 transition">
+          <a href="https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=" 
+             download="run-dash-neon-alpha.apk"
+             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-bold text-white shadow-lg active:scale-95 transition">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2L6.5 11h3.5v5h4v-5h3.5L12 2z"/></svg>
             <span>DESCARGAR (40 MB)</span>
-          </button>
+          </a>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-sm">
+          <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
+            <span class="text-slate-400 font-semibold">Desarrollador / Estudio</span>
+            <span class="font-orbitron font-bold text-neonCyan">AxioMa Games</span>
+          </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
             <span class="text-slate-400 font-semibold">Sistema Operativo</span>
             <span class="font-orbitron font-bold text-white">Android 7.0 (Nougat) o superior</span>
@@ -408,20 +426,24 @@
             <span class="font-orbitron font-bold text-white">2 GB RAM (Recomendado 4 GB)</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
-            <span class="text-slate-400 font-semibold">Espacio de Almacenamiento</span>
-            <span class="font-orbitron font-bold text-white">40 MB libres</span>
+            <span class="text-slate-400 font-semibold">Tamaño de Descarga</span>
+            <span class="font-orbitron font-bold text-yellow-400">40 MB libres</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
-            <span class="text-slate-400 font-semibold">Desarrollador</span>
-            <span class="font-orbitron font-bold text-neonCyan">AxioMa Games</span>
+            <span class="text-slate-400 font-semibold">Licencia</span>
+            <span class="font-orbitron font-bold text-neonGreen">100% Gratis con Anuncios</span>
+          </div>
+          <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
+            <span class="text-slate-400 font-semibold">Alojamiento y Servidor</span>
+            <span class="font-orbitron font-bold text-slate-300">Supabase Storage</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
             <span class="text-slate-400 font-semibold">Tasa de Refresco</span>
             <span class="font-orbitron font-bold text-neonCyan">60 Hz / 90 Hz / 120 Hz</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
-            <span class="text-slate-400 font-semibold">Licencia</span>
-            <span class="font-orbitron font-bold text-emerald-400">100% Gratis con Anuncios</span>
+            <span class="text-slate-400 font-semibold">Versión del Archivo</span>
+            <span class="font-orbitron font-bold text-pink-400">v1.0.4 Alpha</span>
           </div>
         </div>
       </div>
@@ -441,7 +463,7 @@
             <svg class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-slate-300 text-sm">
-            <p class="pb-4">Sí, totalmente. El archivo APK ha sido analizado con herramientas antivirus líderes (VirusTotal) y no contiene malware, troyanos ni software espía. No solicita permisos sospechosos como acceso a contactos o cámara.</p>
+            <p class="pb-4">Sí, totalmente. El paquete APK oficial generado por AxioMa Games está libre de virus, troyanos o malware, y no solicita permisos innecesarios ni acceso a tus datos privados.</p>
           </div>
         </div>
 
@@ -452,46 +474,48 @@
             <svg class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-slate-300 text-sm">
-            <p class="pb-4">Es una advertencia estándar y automática que muestra el sistema operativo Android cuando descargas cualquier aplicación directamente desde un navegador web fuera de la tienda oficial Google Play Store.</p>
+            <p class="pb-4">Es una advertencia preventiva que Android muestra automáticamente siempre que se descarga una aplicación directamente desde la web en lugar de Google Play Store.</p>
           </div>
         </div>
 
         <!-- FAQ Item 3 -->
         <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
           <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-orbitron font-bold text-sm sm:text-base flex items-center justify-between text-white hover:text-neonCyan transition">
-            <span>¿Puedo jugar con mando Bluetooth o mandos USB-C?</span>
+            <span>¿Tiene compatibilidad con mandos Bluetooth o USB?</span>
             <svg class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-slate-300 text-sm">
-            <p class="pb-4">Sí, Neon Dash reconoce automáticamente controladores compatibles con Android (mandos de Xbox, PlayStation y genéricos vía Bluetooth), mapeando los gatillos y cruceta para cambio de carril y salto.</p>
+            <p class="pb-4">Sí, Neon Dash Runner mapea automáticamente crucetas y gatillos de mandos compatibles con Android para cambios de carril y saltos dobles.</p>
           </div>
         </div>
 
         <!-- FAQ Item 4 -->
         <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
           <button onclick="toggleFaq(this)" class="w-full p-4 text-left font-orbitron font-bold text-sm sm:text-base flex items-center justify-between text-white hover:text-neonCyan transition">
-            <span>¿Cómo actualizo a versiones futuras del juego?</span>
+            <span>¿Se pierden mis récords al actualizar la aplicación?</span>
             <svg class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="max-h-0 overflow-hidden transition-all duration-300 px-4 text-slate-300 text-sm">
-            <p class="pb-4">Para actualizar, simplemente descarga la nueva versión APK desde esta página web e instálala. El sistema mantendrá automáticamente tus puntuaciones y récords acumulados sin perder nada.</p>
+            <p class="pb-4">No. Al instalar una nueva versión APK por encima de la existente, Android conserva intactos tus puntajes locales, estrellas y configuraciones.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA Banner -->
-    <section class="mt-20 glass-panel p-8 sm:p-12 rounded-3xl text-center relative overflow-hidden border border-neonCyan/40 shadow-[0_0_50px_rgba(6,182,212,0.2)]">
+    <!-- STREAMING_CHUNK:Rendering final call to action banner with <a> download button -->
+    <section class="mt-20 glass-panel p-8 sm:p-12 rounded-3xl text-center relative overflow-hidden border border-cyan-400/40 shadow-[0_0_50px_rgba(0,240,255,0.2)]">
       <div class="relative z-10 flex flex-col items-center">
         <h2 class="text-3xl sm:text-5xl font-black font-orbitron tracking-tight mb-3">
           ¿LISTO PARA EL RITMO NEÓN?
         </h2>
         <p class="text-slate-300 max-w-lg mb-6 font-medium text-sm sm:text-base">
-          Descarga la APK directa de AxioMa Games y pon a prueba tus reflejos.
+          Descarga la APK directa oficial de AxioMa Games desde Supabase Storage y pon a prueba tus reflejos.
         </p>
-        <button onclick="startApkDownload()" class="pulse-btn px-10 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-neonPink to-yellow-400 text-white font-orbitron font-black text-base tracking-wider hover:scale-105 active:scale-95 transition-transform">
-          DESCARGAR NEON DASH (40 MB)
-        </button>
+        <a href="https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=" 
+           download="run-dash-neon-alpha.apk"
+           class="pulse-btn px-10 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-neonPink to-yellow-400 text-white font-orbitron font-black text-base tracking-wider shadow-[0_0_30px_rgba(0,240,255,0.6)]">
+          DESCARGAR NEON DASH RUNNER (40 MB)
+        </a>
       </div>
     </section>
   </main>
@@ -502,7 +526,7 @@
         <span class="font-orbitron font-bold text-white text-sm">NEON DASH RUNNER</span>
         <span>• Desarrollado por <strong class="text-neonCyan">AxioMa Games</strong></span>
       </div>
-      <p>© 2024 AxioMa Games. Todos los derechos reservados.</p>
+      <p>© 2026 AxioMa Games. Todos los derechos reservados.</p>
       <div class="flex items-center gap-4">
         <a href="#" class="hover:text-neonCyan transition">Términos</a>
         <a href="#" class="hover:text-neonCyan transition">Privacidad</a>
@@ -511,53 +535,12 @@
     </div>
   </footer>
 
-  <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-    <div class="glass-panel p-6 sm:p-8 rounded-3xl max-w-md w-full border border-neonCyan/60 shadow-[0_0_50px_rgba(6,182,212,0.4)] text-center relative">
-      <!-- Close Button -->
-      <button onclick="closeDownloadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-
-      <!-- Animated Icon -->
-      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cyan-500/20 border-2 border-neonCyan flex items-center justify-center text-neonCyan shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-        <svg id="modalIconDownload" class="w-8 h-8 fill-current animate-bounce" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
-        <svg id="modalIconDone" class="w-8 h-8 fill-emerald-400 hidden" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-      </div>
-
-      <h3 id="modalTitle" class="font-orbitron font-black text-xl text-white mb-1">INICIANDO DESCARGA...</h3>
-      <p id="modalDesc" class="text-xs text-slate-300 mb-5 font-semibold">Generando paquete seguro Neon Dash (AxioMa Games)</p>
-
-      <!-- Progress Bar Container -->
-      <div class="w-full bg-slate-900 rounded-full h-3.5 border border-slate-700 p-0.5 mb-2 overflow-hidden">
-        <div id="modalProgressBar" class="h-full rounded-full bg-gradient-to-r from-neonCyan via-neonPink to-yellow-400 w-0 transition-all duration-150"></div>
-      </div>
-
-      <div class="flex justify-between items-center text-[11px] font-orbitron font-bold text-slate-400 mb-5">
-        <span id="modalProgressText">0%</span>
-        <span id="modalMbText">0 MB / 40 MB</span>
-      </div>
-
-      <div id="modalInstructions" class="hidden p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-left text-xs text-slate-300">
-        <p class="font-bold text-white mb-1">¿No comenzó la descarga?</p>
-        <p class="mb-2 text-[11px] text-slate-400">Si tu navegador bloqueó la redirección automática, pulsa el botón directo:</p>
-        <a id="btnDirectDownload" href="https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl bg-neonCyan/20 border border-neonCyan text-neonCyan font-orbitron text-center font-black hover:bg-neonCyan/30 transition">
-          DESCARGA DIRECTA (40 MB)
-        </a>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Direct APK URL (Supabase Storage)
-    const APK_DOWNLOAD_URL = "https://blyhqilmfmocxvzmjxsh.supabase.co/storage/v1/object/public/Neon%20Dash%20Runner%20GAME/run-dash-neon-alpha.apk?download=";
-
-    // FAQ Accordion Toggle
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('svg');
       const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
-      // Close all other items
       document.querySelectorAll('#faq button').forEach(b => {
         if (b !== button) {
           b.nextElementSibling.style.maxHeight = '0px';
@@ -572,77 +555,6 @@
         content.style.maxHeight = content.scrollHeight + 'px';
         icon.style.transform = 'rotate(180deg)';
       }
-    }
-
-    // Modal & Real APK Direct Download Handler
-    let downloadInterval = null;
-
-    function startApkDownload() {
-      const modal = document.getElementById('downloadModal');
-      const bar = document.getElementById('modalProgressBar');
-      const text = document.getElementById('modalProgressText');
-      const mbText = document.getElementById('modalMbText');
-      const title = document.getElementById('modalTitle');
-      const desc = document.getElementById('modalDesc');
-      const iconDown = document.getElementById('modalIconDownload');
-      const iconDone = document.getElementById('modalIconDone');
-      const instructions = document.getElementById('modalInstructions');
-      const directBtn = document.getElementById('btnDirectDownload');
-
-      // Reset state
-      modal.classList.remove('hidden');
-      setTimeout(() => modal.classList.remove('opacity-0'), 10);
-
-      let currentPct = 0;
-      const totalMb = 40.0;
-      bar.style.width = '0%';
-      text.textContent = '0%';
-      mbText.textContent = `0 MB / ${totalMb} MB`;
-      title.textContent = 'CONECTANDO CON SERVIDOR...';
-      desc.textContent = 'Preparando descarga segura desde AxioMa Games';
-      iconDown.classList.remove('hidden');
-      iconDone.classList.add('hidden');
-      instructions.classList.add('hidden');
-
-      if (downloadInterval) clearInterval(downloadInterval);
-
-      downloadInterval = setInterval(() => {
-        currentPct += Math.floor(Math.random() * 12) + 6;
-        if (currentPct >= 100) {
-          currentPct = 100;
-          clearInterval(downloadInterval);
-
-          // Completed State
-          bar.style.width = '100%';
-          text.textContent = '100%';
-          mbText.textContent = `${totalMb} MB / ${totalMb} MB`;
-          title.textContent = '¡DESCARGA INICIADA!';
-          desc.textContent = 'Tu descarga de Neon Dash está en curso. Revisa tus notificaciones.';
-          iconDown.classList.add('hidden');
-          iconDone.classList.remove('hidden');
-          instructions.classList.remove('hidden');
-
-          // Trigger official direct download link
-          window.location.href = APK_DOWNLOAD_URL;
-        } else {
-          bar.style.width = currentPct + '%';
-          text.textContent = currentPct + '%';
-          const loadedMb = ((currentPct / 100) * totalMb).toFixed(1);
-          mbText.textContent = `${loadedMb} MB / ${totalMb} MB`;
-        }
-      }, 100);
-
-      // Direct fallback button
-      directBtn.onclick = () => {
-        window.location.href = APK_DOWNLOAD_URL;
-      };
-    }
-
-    function closeDownloadModal() {
-      const modal = document.getElementById('downloadModal');
-      modal.classList.add('opacity-0');
-      if (downloadInterval) clearInterval(downloadInterval);
-      setTimeout(() => modal.classList.add('hidden'), 300);
     }
   </script>
 </body>
