@@ -92,23 +92,27 @@
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo Brand -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-black/60 border-2 border-neonCyan flex items-center justify-center p-1 shadow-[0_0_15px_rgba(6,182,212,0.6)] group-hover:scale-105 transition-transform">
-          <!-- 2D Geometric Face SVG -->
-          <svg viewBox="0 0 100 100" class="w-full h-full">
-            <rect x="5" y="5" width="90" height="90" fill="#052e16" stroke="#22c55e" stroke-width="8" rx="14" />
-            <!-- Inner Box -->
-            <rect x="18" y="18" width="64" height="64" fill="#022c22" stroke="#06b6d4" stroke-width="4" rx="8" />
-            <!-- Face Eyes & Mouth -->
-            <rect x="28" y="32" width="16" height="16" fill="#ffffff" rx="2" />
-            <rect x="56" y="32" width="16" height="16" fill="#ffffff" rx="2" />
-            <rect x="32" y="60" width="36" height="8" fill="#ffffff" rx="2" />
+        <div class="w-11 h-11 rounded-2xl bg-black/80 border border-cyan-400/50 flex items-center justify-center p-1.5 shadow-[0_0_20px_rgba(6,182,212,0.6)] group-hover:scale-105 transition-transform">
+          <!-- Official Neon Cube Logo SVG (Concentric Glow Rings + Square Face) -->
+          <svg viewBox="0 0 256 256" class="w-full h-full drop-shadow-[0_0_12px_#00f0ff]">
+            <rect width="256" height="256" rx="56" fill="#04020a"/>
+            <!-- Outer Cyan Ring -->
+            <rect x="18" y="18" width="220" height="220" rx="46" fill="none" stroke="#00f0ff" stroke-width="12" stroke-opacity="0.95"/>
+            <!-- Neon Green Ring -->
+            <rect x="42" y="42" width="172" height="172" rx="36" fill="none" stroke="#22c55e" stroke-width="13" stroke-opacity="0.95"/>
+            <!-- Inner Cyan Border -->
+            <rect x="68" y="68" width="120" height="120" rx="26" fill="#031f18" stroke="#06b6d4" stroke-width="10"/>
+            <!-- Square Eyes & Mouth -->
+            <rect x="92" y="96" width="26" height="26" rx="3" fill="#ffffff"/>
+            <rect x="138" y="96" width="26" height="26" rx="3" fill="#ffffff"/>
+            <rect x="98" y="146" width="60" height="12" rx="3" fill="#ffffff"/>
           </svg>
         </div>
         <div class="flex flex-col">
           <span class="font-orbitron font-black text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-pink-400 to-yellow-300">
             NEON DASH
           </span>
-          <span class="text-[10px] font-orbitron tracking-widest text-slate-400 -mt-1 font-bold">APK ANDROID OFICIAL</span>
+          <span class="text-[10px] font-orbitron tracking-widest text-slate-400 -mt-1 font-bold">BY AXIOMA GAMES</span>
         </div>
       </a>
 
@@ -124,7 +128,7 @@
       <div class="flex items-center gap-3">
         <button onclick="startApkDownload()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-black tracking-wider text-white hover:opacity-90 active:scale-95 transition shadow-[0_0_15px_rgba(6,182,212,0.4)]">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2L6.5 11h3.5v5h4v-5h3.5L12 2z"/></svg>
-          <span>DESCARGAR (28 MB)</span>
+          <span>DESCARGAR (40 MB)</span>
         </button>
       </div>
     </div>
@@ -171,8 +175,8 @@
 
           <div class="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass-panel text-slate-300 text-xs">
             <div class="flex flex-col">
-              <span class="font-bold text-slate-200">Archivo: <span class="text-neonCyan">NeonDash_v1.0.4.apk</span></span>
-              <span class="text-slate-400">Peso: 28.4 MB • Actualizado hoy</span>
+              <span class="font-bold text-slate-200">Archivo: <span class="text-neonCyan">NeonDash_AxioMa.apk</span></span>
+              <span class="text-slate-400">Peso: 40 MB • Actualizado hoy</span>
             </div>
           </div>
         </div>
@@ -390,7 +394,7 @@
           </div>
           <button onclick="startApkDownload()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonCyan to-neonPink font-orbitron text-xs font-bold text-white shadow-lg active:scale-95 transition">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2L6.5 11h3.5v5h4v-5h3.5L12 2z"/></svg>
-            <span>DESCARGAR V1.0.4</span>
+            <span>DESCARGAR (40 MB)</span>
           </button>
         </div>
 
@@ -405,11 +409,11 @@
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
             <span class="text-slate-400 font-semibold">Espacio de Almacenamiento</span>
-            <span class="font-orbitron font-bold text-white">65 MB libres</span>
+            <span class="font-orbitron font-bold text-white">40 MB libres</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
-            <span class="text-slate-400 font-semibold">Arquitecturas Soportadas</span>
-            <span class="font-orbitron font-bold text-white">arm64-v8a / armeabi-v7a</span>
+            <span class="text-slate-400 font-semibold">Desarrollador</span>
+            <span class="font-orbitron font-bold text-neonCyan">AxioMa Games</span>
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
             <span class="text-slate-400 font-semibold">Tasa de Refresco</span>
@@ -417,7 +421,7 @@
           </div>
           <div class="flex justify-between items-center p-3 rounded-xl bg-black/40 border border-slate-800">
             <span class="text-slate-400 font-semibold">Licencia</span>
-            <span class="font-orbitron font-bold text-emerald-400">100% Gratuita (Sin compras ocultas)</span>
+            <span class="font-orbitron font-bold text-emerald-400">100% Gratis con Anuncios</span>
           </div>
         </div>
       </div>
@@ -483,10 +487,10 @@
           ¿LISTO PARA EL RITMO NEÓN?
         </h2>
         <p class="text-slate-300 max-w-lg mb-6 font-medium text-sm sm:text-base">
-          Descarga la APK gratuita ahora y compite por romper tu propio récord en la pista arcade.
+          Descarga la APK directa de AxioMa Games y pon a prueba tus reflejos.
         </p>
         <button onclick="startApkDownload()" class="pulse-btn px-10 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-neonPink to-yellow-400 text-white font-orbitron font-black text-base tracking-wider hover:scale-105 active:scale-95 transition-transform">
-          DESCARGAR NEON DASH (28 MB)
+          DESCARGAR NEON DASH (40 MB)
         </button>
       </div>
     </section>
@@ -496,9 +500,9 @@
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
         <span class="font-orbitron font-bold text-white text-sm">NEON DASH RUNNER</span>
-        <span>• Juego arcade rítmico</span>
+        <span>• Desarrollado por <strong class="text-neonCyan">AxioMa Games</strong></span>
       </div>
-      <p>Inspirado en juegos geométricos. No afiliado a RobTop Games.</p>
+      <p>© 2026 AxioMa Games. Todos los derechos reservados.</p>
       <div class="flex items-center gap-4">
         <a href="#" class="hover:text-neonCyan transition">Términos</a>
         <a href="#" class="hover:text-neonCyan transition">Privacidad</a>
@@ -521,7 +525,7 @@
       </div>
 
       <h3 id="modalTitle" class="font-orbitron font-black text-xl text-white mb-1">INICIANDO DESCARGA...</h3>
-      <p id="modalDesc" class="text-xs text-slate-300 mb-5 font-semibold">Generando paquete seguro NeonDash_v1.0.4.apk</p>
+      <p id="modalDesc" class="text-xs text-slate-300 mb-5 font-semibold">Generando paquete seguro Neon Dash (AxioMa Games)</p>
 
       <!-- Progress Bar Container -->
       <div class="w-full bg-slate-900 rounded-full h-3.5 border border-slate-700 p-0.5 mb-2 overflow-hidden">
@@ -530,20 +534,23 @@
 
       <div class="flex justify-between items-center text-[11px] font-orbitron font-bold text-slate-400 mb-5">
         <span id="modalProgressText">0%</span>
-        <span id="modalMbText">0 MB / 28.4 MB</span>
+        <span id="modalMbText">0 MB / 40 MB</span>
       </div>
 
       <div id="modalInstructions" class="hidden p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 text-left text-xs text-slate-300">
         <p class="font-bold text-white mb-1">¿No comenzó la descarga?</p>
-        <p class="mb-2 text-[11px] text-slate-400">Si tu navegador bloqueó la descarga automática, pulsa el botón directo:</p>
-        <a id="btnDirectDownload" href="#" download="NeonDash_v1.0.4.apk" class="block w-full py-2.5 rounded-xl bg-neonCyan/20 border border-neonCyan text-neonCyan font-orbitron text-center font-black hover:bg-neonCyan/30 transition">
-          FORZAR DESCARGA DIRECTA
+        <p class="mb-2 text-[11px] text-slate-400">Si tu navegador bloqueó la redirección automática, pulsa el botón directo:</p>
+        <a id="btnDirectDownload" href="https://apk.e-droid.net/apk/app4195233-9g2vzb.apk?v=1" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 rounded-xl bg-neonCyan/20 border border-neonCyan text-neonCyan font-orbitron text-center font-black hover:bg-neonCyan/30 transition">
+          DESCARGA DIRECTA (40 MB)
         </a>
       </div>
     </div>
   </div>
 
   <script>
+    // Direct APK URL
+    const APK_DOWNLOAD_URL = "https://apk.e-droid.net/apk/app4195233-9g2vzb.apk?v=1";
+
     // FAQ Accordion Toggle
     function toggleFaq(button) {
       const content = button.nextElementSibling;
@@ -567,7 +574,7 @@
       }
     }
 
-    // Modal & Simulated APK Download Handler
+    // Modal & Real APK Direct Download Handler
     let downloadInterval = null;
 
     function startApkDownload() {
@@ -587,12 +594,12 @@
       setTimeout(() => modal.classList.remove('opacity-0'), 10);
 
       let currentPct = 0;
-      const totalMb = 28.4;
+      const totalMb = 40.0;
       bar.style.width = '0%';
       text.textContent = '0%';
       mbText.textContent = `0 MB / ${totalMb} MB`;
-      title.textContent = 'DESCARGANDO APK...';
-      desc.textContent = 'Generando paquete verificado NeonDash_v1.0.4.apk';
+      title.textContent = 'CONECTANDO CON SERVIDOR...';
+      desc.textContent = 'Preparando descarga segura desde AxioMa Games';
       iconDown.classList.remove('hidden');
       iconDone.classList.add('hidden');
       instructions.classList.add('hidden');
@@ -600,7 +607,7 @@
       if (downloadInterval) clearInterval(downloadInterval);
 
       downloadInterval = setInterval(() => {
-        currentPct += Math.floor(Math.random() * 9) + 4;
+        currentPct += Math.floor(Math.random() * 12) + 6;
         if (currentPct >= 100) {
           currentPct = 100;
           clearInterval(downloadInterval);
@@ -609,41 +616,26 @@
           bar.style.width = '100%';
           text.textContent = '100%';
           mbText.textContent = `${totalMb} MB / ${totalMb} MB`;
-          title.textContent = '¡DESCARGA COMPLETADA!';
-          desc.textContent = 'El archivo está listo. Abre las notificaciones o descargas.';
+          title.textContent = '¡DESCARGA INICIADA!';
+          desc.textContent = 'Tu descarga de Neon Dash está en curso. Revisa tus notificaciones.';
           iconDown.classList.add('hidden');
           iconDone.classList.remove('hidden');
           instructions.classList.remove('hidden');
 
-          // Trigger real browser simulated file download trigger
-          triggerFileSave('NeonDash_v1.0.4.apk');
+          // Trigger official direct download link
+          window.location.href = APK_DOWNLOAD_URL;
         } else {
           bar.style.width = currentPct + '%';
           text.textContent = currentPct + '%';
           const loadedMb = ((currentPct / 100) * totalMb).toFixed(1);
           mbText.textContent = `${loadedMb} MB / ${totalMb} MB`;
         }
-      }, 120);
+      }, 100);
 
       // Direct fallback button
-      directBtn.onclick = (e) => {
-        e.preventDefault();
-        triggerFileSave('NeonDash_v1.0.4.apk');
+      directBtn.onclick = () => {
+        window.location.href = APK_DOWNLOAD_URL;
       };
-    }
-
-    function triggerFileSave(filename) {
-      // Create a dummy APK payload blob so the browser treats it as a legitimate download trigger
-      const dummyContent = "NeonDash Official APK Package Build v1.0.4";
-      const blob = new Blob([dummyContent], { type: "application/vnd.android.package-archive" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
     }
 
     function closeDownloadModal() {
